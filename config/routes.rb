@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  get 'pages/about'
-  get 'pages/contacts'
+  get 'about' => 'pages#about'
+  get 'contacts' => 'pages#contacts'
 
   root to: 'home#index'
 
