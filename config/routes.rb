@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   get 'about' => 'pages#about'
+  get 'gallery' => 'pages#gallery'
+  get 'price' => 'pages#price'
   get 'contacts' => 'pages#contacts'
 
   root to: 'home#index'
