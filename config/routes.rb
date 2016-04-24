@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get 'about' => 'pages#about'
   get 'gallery' => 'pages#gallery'
   get 'price' => 'pages#price'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  resources :comments
+  resources :messages
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
