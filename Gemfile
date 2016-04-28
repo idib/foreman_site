@@ -44,3 +44,15 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
