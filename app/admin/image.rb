@@ -13,5 +13,24 @@ ActiveAdmin.register Image do
 #   permitted
 # end
 
+  permit_params :title, :text, :image
+
+  index do
+    column :title
+    column :text
+    column :image_file_name
+    column :created_at
+    actions
+  end
+
+  form do |f|
+    f.inputs "Image Details" do
+      f.input :title
+      f.input :text
+      f.input :image, as: :file
+    end
+    f.actions
+  end
+
 
 end
