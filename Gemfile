@@ -48,6 +48,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'paperclip'
 
 group :test, :development do
   gem 'rspec-rails'
