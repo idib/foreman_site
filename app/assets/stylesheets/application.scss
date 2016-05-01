@@ -1,3 +1,42 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "fonts";
+
+$FirstMainColor:#9c5c1c;
+$SecondMainColor:#FFFFFF;
+$MA:'MartAWX';
+
+
+
+body{
+
+}
+
+.Header{
+	font-family: $MA;
+	.LogoBar{
+		position: static;
+		img{
+			position: relative;
+			top:0px;
+			left:0px;
+		}
+		span.Name{
+			font-size:2em;
+			color: $FirstMainColor;
+		}
+	}
+
+
+	.navbar{
+		background: $FirstMainColor;
+		color: $SecondMainColor;
+
+			border-radius: 1.1em;
+
+		.navbar-default .navbar-brand{
+			color: $SecondMainColor
+		}
+	}
+}
