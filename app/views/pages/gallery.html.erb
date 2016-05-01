@@ -1,18 +1,18 @@
 <div class="list">
 	<div class="list-work">
-		<span class="work-title"></span>
-		<div class="list list-img work-img">
-			<img src=""> <!-- src-->
-			<img src=""> <!-- src-->
-			<img src=""> <!-- src-->
-			<!-- .... -->
-		</div>
-		<div class="list list-text work-text">
-			<span class="text"> <!-- text--></span>
-			<span class="text"> <!-- text--></span>
-			<span class="text"> <!-- text--></span>
-			<!-- .... -->
-		</div>
+		<% @works.each do |work| %>
+				<% if work.gallery == true %>
+						<span class="work-title"><%= work.title %></span>
+						<div class="list list-img work-img">
+								<% work.pictures.each do |picture| %>
+										<%= image_tag(picture.picture.url(:medium)) %>
+								<% end %>
+						</div>
+						<div class="list list-text work-text">
+							<span class="text"><%= work.description %></span>
+						</div>
 
+				<% end %>
+		<% end %>
 	</div>
 </div>
