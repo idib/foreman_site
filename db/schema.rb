@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430162954) do
+ActiveRecord::Schema.define(version: 20160501174555) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -63,6 +63,23 @@ ActiveRecord::Schema.define(version: 20160430162954) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean  "inspected"
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.integer  "work_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pictures", ["work_id"], name: "index_pictures_on_work_id"
+
+  create_table "works", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.boolean  "gallery"
+    t.boolean  "work"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
