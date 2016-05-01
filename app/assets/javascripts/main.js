@@ -1,6 +1,6 @@
 var eps;
 
-jQuery(document).ready(function(){
+$(document).ready(function(){
     var str = 'class="active"';
     var strr = 'active';
     eps = $(window).height()*0.1;
