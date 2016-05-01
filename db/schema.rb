@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20160430162954) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "images", force: :cascade do |t|
-    t.string   "url"
     t.string   "title"
     t.text     "text"
     t.datetime "created_at",         null: false
