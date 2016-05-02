@@ -3,13 +3,15 @@
 	<ol class="carousel-indicators">
 	</ol>
 	<div class="carousel-inner" role="listbox">
-		<div class="item slid">
-			<img src="" alt=""> <!-- src and title --> 
-			<div class="carousel-caption">
-				<h3><!--title--> TITLE</h3>
-				<p><!--text--> TEXT</p>
+		<% @images.each do |image| %>
+			<div class="item slid">
+				<%= image_tag image.image.url(:medium) %>
+				<div class="carousel-caption">
+					<h3><%= image.title %></h3>
+					<p><%= image.text %></p>
+				</div>
 			</div>
-		</div>
+		<% end %>
 	</div>
 	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
