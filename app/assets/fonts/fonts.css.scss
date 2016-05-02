@@ -5,3 +5,30 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+
+@font-face {
+	font-family: 'Georgia';
+	src: url(georgia.ttf);
+	src: url(georgia.ttf) format("truetype"), ;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'GeorgiaBold';
+	src: url(georgia-bold.ttf);
+	src: url(georgia-bold.ttf) format("truetype"), ;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'GeorgiaItalic';
+	src: url(georgia-italic.ttf);
+	src: url(georgia-italic.ttf) format("truetype"), ;
+	font-weight: normal;
+	font-style: normal;
+}
