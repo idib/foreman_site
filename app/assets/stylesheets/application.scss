@@ -1,6 +1,5 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 @import "fonts";
 
 $FirstMainColor:#9c5c1c;
@@ -12,7 +11,7 @@ $Gb:'GeorgiaItalic';
 
 
 body{
-
+	font-family: $G;
 }
 
 .Header{

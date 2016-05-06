@@ -5,7 +5,7 @@
 	<div class="carousel-inner" role="listbox">
 		<% @images.each do |image| %>
 			<div class="item slid">
-				<%= image_tag image.image.url(:medium) %>
+				<%= image_tag image.image.url%>
 				<div class="carousel-caption">
 					<h3><%= image.title %></h3>
 					<p><%= image.text %></p>

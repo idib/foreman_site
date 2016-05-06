@@ -15,3 +15,28 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+	$("a.navbar-brand").each(function(i,v){
+		$(v).css("color","white");
+	});
+	$("li>a").each(function(i,v){
+		$(v).css("color","white");
+	});
+    window.onscroll = function(){
+        var pos = $('#NavBar').offset().top - $(window).scrollTop();
+        var posabs = $('#Abspos').offset().top - $(window).scrollTop();
+        console.log(pos);
+        console.log(eps);
+        if(pos <= eps)
+        {
+            $("#NavBar").addClass('navbar-fixed-top');
+            $('#Abspos').css("heigth",$("#NavBar").height().toString() + "px");
+        }
+        if(posabs > eps){
+            $("#NavBar").removeClass('navbar-fixed-top');
+            $('#Abspos').css("heigth","0px");
+        }
+    }
+});
